@@ -18,6 +18,7 @@ ADD https://github.com/tootsuite/mastodon/archive/v${MASTODON_VERSION}.tar.gz .
 RUN tar -xvf v${MASTODON_VERSION}.tar.gz \
  && mkdir -p /tmp/mastodon/build/ \
  && mv mastodon-*/* /tmp/mastodon/build/ \
+ && mv mastodon-*/.[^\.]* /tmp/mastodon/build/ \
  && rm -f v${MASTODON_VERSION}.tar.gz \
 
 WORKDIR /mastodon
