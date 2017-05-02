@@ -54,6 +54,7 @@ RUN cp /tmp/mastodon/build/Gemfile . \
  && apk del build-dependencies \
  && rm -rf /var/cache/apk/* \
  && cp -r /tmp/mastodon/build/* . \
+ && cp -r /tmp/mastodon/build/.[^\.]* . \
  && rm -rf /tmp/mastodon/
 
 VOLUME /mastodon/public/system /mastodon/public/assets
